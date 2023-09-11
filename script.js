@@ -48,7 +48,7 @@ function reload(arr) {
 
     mainDiv.onclick = () => {
       item.isDone = true;
-      reload(todos);
+      title.classList.toggle("lineThrough", item.isDone);
     };
     title.classList.toggle("lineThrough", item.isDone);
     removeBtn.onclick = () => {
@@ -59,4 +59,4 @@ function reload(arr) {
   }
 }
 
-reload();
+reload(todos);
