@@ -49,10 +49,7 @@ function reload(arr) {
 
   for (let item of arr) {
     console.log(todos);
-    if (error === true) {
-      
-    } else {
-          let mainDiv = document.createElement("div");
+    let mainDiv = document.createElement("div");
     let topDiv = document.createElement("div");
     let title = document.createElement("span");
     let removeBtn = document.createElement("button");
@@ -70,7 +67,6 @@ function reload(arr) {
     mainDiv.append(topDiv, timeSpan);
     topDiv.append(title, removeBtn);
     container.append(mainDiv);
-    }
 
     mainDiv.ondblclick = () => {
       let newName = prompt("enter new name");
@@ -103,12 +99,12 @@ function reload(arr) {
         item.isDone = false;
       }
       if (error === true) {
-        console.log('error');
+        console.log("error");
       } else {
         item.title = inp.value;
         console.log(item.title, inp.value);
         modalBg.style.display = "none";
-        console.log('false');
+        console.log("false");
       }
     };
     mainDiv.ondblclick = () => {
