@@ -49,7 +49,10 @@ function reload(arr) {
 
   for (let item of arr) {
     console.log(todos);
-    let mainDiv = document.createElement("div");
+    if (error === true) {
+      
+    } else {
+          let mainDiv = document.createElement("div");
     let topDiv = document.createElement("div");
     let title = document.createElement("span");
     let removeBtn = document.createElement("button");
@@ -67,6 +70,8 @@ function reload(arr) {
     mainDiv.append(topDiv, timeSpan);
     topDiv.append(title, removeBtn);
     container.append(mainDiv);
+    }
+
     mainDiv.ondblclick = () => {
       let newName = prompt("enter new name");
       if (newName.length === 0) {
